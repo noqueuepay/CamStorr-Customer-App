@@ -62,6 +62,8 @@ public class ProfileFragment extends Fragment {
             address = addressDisplay.getText().toString();
             if (name.isEmpty() || email.isEmpty() || zipcode.isEmpty() || address.isEmpty())
                 Toast.makeText(getContext(), "Fill all details", Toast.LENGTH_SHORT).show();
+            else if (!Constants.validateEmail(email))
+                Toast.makeText(getContext(), "Please enter valid email", Toast.LENGTH_SHORT).show();
             else
                 updateFirebase();
         });

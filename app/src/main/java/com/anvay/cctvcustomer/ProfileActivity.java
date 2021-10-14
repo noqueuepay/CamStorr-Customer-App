@@ -37,12 +37,11 @@ public class ProfileActivity extends AppCompatActivity {
         userId = sharedPreferences.getString(Constants.USER_FIREBASE_ID, "");
         mobileNumberDisplay.setText(mobileNumber);
         createProfile.setOnClickListener(view -> {
-            if (checkFields())
+            if (!checkFields()) Toast.makeText(this, "Fill all fields", Toast.LENGTH_SHORT).show();
+            else if (!Constants.validateEmail(emailDisplay.getText().toString()))
+                Toast.makeText(this, "Please Enter valid email", Toast.LENGTH_SHORT).show();
+            else
                 uploadData();
-            else {
-                Toast.makeText(this, "Fill all fields", Toast.LENGTH_SHORT).show();
-                loadingView.setVisibility(View.INVISIBLE);
-            }
         });
     }
 
