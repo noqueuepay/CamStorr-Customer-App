@@ -21,7 +21,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
-    public static String userId, userAddress, userName, mobileNumber;
+    public static String userId, userAddress, userName, mobileNumber, userEmail;
     private BottomNavigationView navView;
     private TitleViewModel titleViewModel;
 
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         userId = sharedPreferences.getString(Constants.USER_FIREBASE_ID, "");
         userAddress = sharedPreferences.getString(Constants.USER_ADDRESS, "");
         userName = sharedPreferences.getString(Constants.USER_NAME, "");
+        userEmail = sharedPreferences.getString(Constants.USER_EMAIL,"");
         mobileNumber = sharedPreferences.getString(Constants.MOBILE_NUMBER,"");
         if (!sharedPreferences.getBoolean(Constants.IS_LOGGED_IN, false)) {
             Intent i = new Intent(this, LoginActivity.class);

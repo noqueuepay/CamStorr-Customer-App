@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                             assert user != null;
                             editor.putString(Constants.USER_ZIPCODE, user.getZipcode());
                             editor.putString(Constants.USER_NAME, user.getName());
-                            editor.putString(Constants.USER_CITY, user.getCity());
+                            editor.putString(Constants.USER_EMAIL, user.getEmail());
                             editor.putString(Constants.USER_ADDRESS, user.getAddress());
                             editor.putBoolean(Constants.IS_PROFILE_DONE, true);
                             editor.apply();

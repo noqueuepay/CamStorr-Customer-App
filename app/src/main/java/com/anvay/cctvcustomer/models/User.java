@@ -1,14 +1,14 @@
 package com.anvay.cctvcustomer.models;
 
 public class User {
-    private String name, mobileNumber, zipcode, address, city;
+    private String name, mobileNumber, zipcode, address, email;
 
-    public User(String name, String mobileNumber, String zipcode, String address, String city) {
+    public User(String name, String mobileNumber, String zipcode, String address, String email) {
         this.name = name;
         this.mobileNumber = mobileNumber;
         this.zipcode = zipcode;
         this.address = address;
-        this.city = city;
+        this.email = email;
     }
 
     public String getName() {
@@ -43,11 +43,11 @@ public class User {
         this.address = address;
     }
 
-    public String getCity() {
-        return city;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

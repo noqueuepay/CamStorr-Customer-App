@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="razorpay_api_key" templateMergeStrategy="preserve" translatable="false">
-        //Add razorpay api here
+        //Add razorpay api key here
     </string>
 </resources>

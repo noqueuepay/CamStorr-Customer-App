@@ -16,7 +16,7 @@ public abstract class Constants {
             USER_FIREBASE_ID = "firebaseId",
             USER_ZIPCODE = "zipcode",
             USER_NAME = "name",
-            USER_CITY = "city",
+            USER_EMAIL = "email",
             USER_ADDRESS = "address",
             MOBILE_NUMBER = "mobileNumber",
             IS_LOGGED_IN = "isLoggedIn",

@@ -20,8 +20,8 @@ import java.util.Objects;
 public class ProfileActivity extends AppCompatActivity {
     private ActivityProfileBinding binding;
     private View loadingView;
-    private EditText nameDisplay, addressDisplay, mobileNumberDisplay, cityDisplay, zipcodeDisplay;
-    private String userId, name, address, mobileNumber, city, zipcode;
+    private EditText nameDisplay, addressDisplay, mobileNumberDisplay, emailDisplay, zipcodeDisplay;
+    private String userId, name, address, mobileNumber, email, zipcode;
     private Button createProfile;
     private SharedPreferences sharedPreferences;
 
@@ -48,7 +48,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void uploadData() {
         loadingView.setVisibility(View.VISIBLE);
-        User user = new User(name, mobileNumber, zipcode, address, city);
+        User user = new User(name, mobileNumber, zipcode, address, email);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection(Constants.BASE_USERS_URL)
                 .document(userId)
@@ -63,7 +63,7 @@ public class ProfileActivity extends AppCompatActivity {
     private void saveData() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(Constants.USER_ADDRESS, address);
-        editor.putString(Constants.USER_CITY, city);
+        editor.putString(Constants.USER_EMAIL, email);
         editor.putString(Constants.USER_ZIPCODE, zipcode);
         editor.putString(Constants.USER_NAME, name);
         editor.putBoolean(Constants.IS_PROFILE_DONE, true);
@@ -76,9 +76,9 @@ public class ProfileActivity extends AppCompatActivity {
     private boolean checkFields() {
         name = nameDisplay.getText().toString();
         address = addressDisplay.getText().toString();
-        city = cityDisplay.getText().toString();
+        email = emailDisplay.getText().toString();
         zipcode = zipcodeDisplay.getText().toString();
-        return !name.isEmpty() && !address.isEmpty() && !city.isEmpty() && !zipcode.isEmpty();
+        return !name.isEmpty() && !address.isEmpty() && !email.isEmpty() && !zipcode.isEmpty();
     }
 
     private void initUI() {
@@ -86,7 +86,7 @@ public class ProfileActivity extends AppCompatActivity {
         nameDisplay = binding.nameDisplay;
         addressDisplay = binding.addressDisplay;
         mobileNumberDisplay = binding.mobileNumberDisplay;
-        cityDisplay = binding.cityDisplay;
+        emailDisplay = binding.emailDisplay;
         zipcodeDisplay = binding.zipcodeDisplay;
         createProfile = binding.createProfile;
     }

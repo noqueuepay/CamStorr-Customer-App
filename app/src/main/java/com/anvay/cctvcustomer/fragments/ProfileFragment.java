@@ -26,10 +26,10 @@ import java.util.HashMap;
 
 public class ProfileFragment extends Fragment {
     private View loadingView;
-    private String name, mobileNumber, city, zipcode, address;
+    private String name, mobileNumber, email, zipcode, address;
     private Button editProfile, updateProfile;
     private SharedPreferences sharedPreferences;
-    private EditText nameDisplay, mobileNumberDisplay, cityDisplay, zipcodeDisplay, addressDisplay;
+    private EditText nameDisplay, mobileNumberDisplay, emailDisplay, zipcodeDisplay, addressDisplay;
     private FragmentProfileBinding binding;
 
     @Override
@@ -46,21 +46,21 @@ public class ProfileFragment extends Fragment {
         setupFields(false);
         name = sharedPreferences.getString(Constants.USER_NAME, "");
         mobileNumber = sharedPreferences.getString(Constants.MOBILE_NUMBER, "");
-        city = sharedPreferences.getString(Constants.USER_CITY, "");
+        email = sharedPreferences.getString(Constants.USER_EMAIL, "");
         zipcode = sharedPreferences.getString(Constants.USER_ZIPCODE, "");
         address = sharedPreferences.getString(Constants.USER_ADDRESS, "");
         nameDisplay.setText(name);
         mobileNumberDisplay.setText(mobileNumber);
-        cityDisplay.setText(city);
+        emailDisplay.setText(email);
         zipcodeDisplay.setText(zipcode);
         addressDisplay.setText(address);
         editProfile.setOnClickListener(view -> setupFields(true));
         updateProfile.setOnClickListener(view -> {
             name = nameDisplay.getText().toString();
-            city = cityDisplay.getText().toString();
+            email = emailDisplay.getText().toString();
             zipcode = zipcodeDisplay.getText().toString();
             address = addressDisplay.getText().toString();
-            if (name.isEmpty() || city.isEmpty() || zipcode.isEmpty() || address.isEmpty())
+            if (name.isEmpty() || email.isEmpty() || zipcode.isEmpty() || address.isEmpty())
                 Toast.makeText(getContext(), "Fill all details", Toast.LENGTH_SHORT).show();
             else
                 updateFirebase();
@@ -70,7 +70,7 @@ public class ProfileFragment extends Fragment {
 
     private void setupFields(boolean editMode) {
         nameDisplay.setEnabled(editMode);
-        cityDisplay.setEnabled(editMode);
+        emailDisplay.setEnabled(editMode);
         zipcodeDisplay.setEnabled(editMode);
         addressDisplay.setEnabled(editMode);
         if (editMode) {
@@ -85,7 +85,7 @@ public class ProfileFragment extends Fragment {
     private void initUI() {
         nameDisplay = binding.nameDisplay;
         mobileNumberDisplay = binding.mobileNumberDisplay;
-        cityDisplay = binding.cityDisplay;
+        emailDisplay = binding.emailDisplay;
         zipcodeDisplay = binding.zipcodeDisplay;
         editProfile = binding.editProfile;
         addressDisplay = binding.addressDisplay;
@@ -98,7 +98,7 @@ public class ProfileFragment extends Fragment {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(Constants.USER_ZIPCODE, user.getZipcode());
         editor.putString(Constants.USER_NAME, user.getName());
-        editor.putString(Constants.USER_CITY, user.getCity());
+        editor.putString(Constants.USER_EMAIL, user.getEmail());
         editor.putString(Constants.USER_ADDRESS, user.getAddress());
         editor.apply();
         loadingView.setVisibility(View.INVISIBLE);
@@ -107,10 +107,10 @@ public class ProfileFragment extends Fragment {
     private void updateFirebase() {
         loadingView.setVisibility(View.VISIBLE);
         String firebaseId = sharedPreferences.getString(Constants.USER_FIREBASE_ID, "");
-        User user = new User(name, mobileNumber, zipcode, address, city);
+        User user = new User(name, mobileNumber, zipcode, address, email);
         HashMap<String, Object> map = new HashMap<>();
         map.put(Constants.USER_NAME, name);
-        map.put(Constants.USER_CITY, city);
+        map.put(Constants.USER_EMAIL, email);
         map.put(Constants.USER_ZIPCODE, zipcode);
         map.put(Constants.USER_ADDRESS, address);
         FirebaseFirestore db = FirebaseFirestore.getInstance();

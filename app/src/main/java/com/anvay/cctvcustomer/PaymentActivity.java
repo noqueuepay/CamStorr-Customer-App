@@ -37,7 +37,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
             options.put("name", "Anvay Technosolutions Pvt. Ltd");
             options.put("currency", "INR");
             options.put("amount", amount);
-            options.put("prefill.email", "p.test@example.com");
+            options.put("prefill.email", MainActivity.userEmail);
             options.put("prefill.name", MainActivity.userName);
             options.put("prefill.contact", MainActivity.mobileNumber);
             options.put("theme.color", getResources().getColor(R.color.colorPrimary));
