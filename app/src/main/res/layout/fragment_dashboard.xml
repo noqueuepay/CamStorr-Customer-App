@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragments.DashboardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="32dp">
+
+            <com.anvay.cctvcustomer.utils.CardOptionView
+                android:id="@+id/posted_tasks"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="@dimen/home_card_option_radius"
+                app:cardElevation="@dimen/home_card_option_elevation"
+                app:cardText="Posted Tasks"
+                app:imageSrc="@drawable/icon_install"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ongoing_tasks"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anvay.cctvcustomer.utils.CardOptionView
+                android:id="@+id/ongoing_tasks"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="@dimen/home_card_option_radius"
+                app:cardElevation="@dimen/home_card_option_elevation"
+                app:cardText="Current Tasks"
+                app:imageSrc="@drawable/icon_repair"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintLeft_toRightOf="@id/posted_tasks"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anvay.cctvcustomer.utils.CardOptionView
+                android:id="@+id/completed_tasks"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/posted_tasks"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="@dimen/home_card_option_radius"
+                app:cardElevation="@dimen/home_card_option_elevation"
+                app:cardText="Completed Tasks"
+                app:imageSrc="@drawable/icon_install"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/orders"
+                app:layout_constraintTop_toBottomOf="@id/posted_tasks" />
+
+            <com.anvay.cctvcustomer.utils.CardOptionView
+                android:id="@+id/orders"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ongoing_tasks"
+                android:layout_margin="16dp"
+                android:layout_toEndOf="@id/completed_tasks"
+                app:cardCornerRadius="@dimen/home_card_option_radius"
+                app:cardElevation="@dimen/home_card_option_elevation"
+                app:cardText="My Orders"
+                app:imageSrc="@drawable/icon_install"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@id/completed_tasks"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ongoing_tasks" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:elevation="20dp"
+        android:paddingBottom="56dp" />
+</FrameLayout>

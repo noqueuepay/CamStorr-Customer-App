@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:clipToPadding="false"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="84dp">
+
+            <TextView
+                android:id="@+id/label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="What are you looking for?"
+                android:textColor="@color/black_2"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/slider_holder" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/slider_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="0"
+                    app:iss_period="2000" />
+            </androidx.cardview.widget.CardView>
+
+            <com.anvay.cctvcustomer.utils.CardOptionView
+                android:id="@+id/service_install"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="@dimen/home_card_option_radius"
+                app:cardElevation="@dimen/home_card_option_elevation"
+                app:cardText="Camera Install"
+                app:imageSrc="@drawable/icon_install"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/service_repair"
+                app:layout_constraintTop_toBottomOf="@id/label_text" />
+
+            <com.anvay.cctvcustomer.utils.CardOptionView
+                android:id="@+id/service_repair"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="@dimen/home_card_option_radius"
+                app:cardElevation="@dimen/home_card_option_elevation"
+                app:cardText="Camera Repair"
+                app:imageSrc="@drawable/icon_repair"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintLeft_toRightOf="@id/service_install"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_text" />
+
+            <com.anvay.cctvcustomer.utils.CardOptionView
+                android:id="@+id/buy_camera"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/service_install"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="@dimen/home_card_option_radius"
+                app:cardElevation="@dimen/home_card_option_elevation"
+                app:cardText="Buy Camera"
+                app:imageSrc="@drawable/icon_install"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/buy_accessory"
+                app:layout_constraintTop_toBottomOf="@id/service_install" />
+
+            <com.anvay.cctvcustomer.utils.CardOptionView
+                android:id="@+id/buy_accessory"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/service_repair"
+                android:layout_margin="16dp"
+                android:layout_toEndOf="@id/buy_camera"
+                app:cardCornerRadius="@dimen/home_card_option_radius"
+                app:cardElevation="@dimen/home_card_option_elevation"
+                app:cardText="Buy Accessory"
+                app:imageSrc="@drawable/icon_install"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@id/buy_camera"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/service_repair" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:elevation="20dp"
+        android:paddingBottom="56dp" />
+</FrameLayout>

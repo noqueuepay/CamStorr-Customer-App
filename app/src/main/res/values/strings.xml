@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">CamStorr</string>
+    <string name="title_home">Home</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_account">Account</string>
+    <string name="app_version">1.0.0</string>
+    <string name="terms_and_conditions">A Terms and Conditions agreement acts as legal contracts between you
+        (the company) who has the website or mobile app, and the user who accesses your website/app.
+        Having a Terms and Conditions agreement is completely optional. No laws require you to have one.
+        Not even the super-strict and wide-reaching General Data Protection Regulation (GDPR).
+        Your Terms and Conditions agreement will be uniquely yours. While some clauses are standard and
+        commonly seen in pretty much every Terms and Conditions agreement, it\'s up to you to set the
+        rules and guidelines that the user must agree to.  You can think of your Terms and Conditions
+        agreement as the legal agreement where you maintain your rights to exclude users from your app in
+        the event that they abuse your app, where you maintain your legal rights against potential app abusers,
+        and so on.  Terms and Conditions agreements are also known as Terms of Service or Terms of Use agreements.
+        These terms are interchangeable, practically speaking.  Check out our Terms and Conditions FAQ for
+        more helpful insight into these important agreements.</string>
+    <string name="new_complaint_fab">New Complaint</string>
+    <string name="empty_complaints_info">No previous complaints</string>
+    <string name="random_text_for_testing">"This is some random text for testing again and again This is some random text for testing again and again This is some random text for testing again and again This is some random text for testing again and again "</string>
+    <string-array name="complaints_list">
+        <item>Payment Related</item>
+        <item>QR scanning Related</item>
+        <item>Store Related</item>
+        <item>Login Related</item>
+        <item>Bug in app</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="brands_list_default">
+        <item>Any</item>
+    </string-array>
+
+    <string-array name="camera_types_list_default">
+        <item>Any</item>
+    </string-array>
+
+    <string-array name="hard_disk_list_default">
+        <item>Any</item>
+    </string-array>
+</resources>

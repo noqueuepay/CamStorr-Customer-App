@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/payment_button"
+                style="@style/FullWidthRoundButton"
+                android:layout_below="@id/date_display"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="32dp"
+                android:text="Proceed to Checkout" />
+
+            <CheckBox
+                android:id="@+id/copy_profile_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_display"
+                android:buttonTint="@color/colorPrimary"
+                android:checked="true"
+                android:text="Use profile address"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/address_display"
+                style="@style/EditTextStyle"
+                android:layout_below="@id/address_label"
+                android:layout_marginStart="0dp" />
+
+            <TextView
+                android:id="@+id/address_label"
+                style="@style/LabelStyle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:text="Delivery Address"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/total_cost_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/date_label"
+                android:layout_alignTop="@id/total_cost_display"
+                android:layout_alignEnd="@id/date_label"
+                android:layout_alignBottom="@id/total_cost_display"
+                android:gravity="center_vertical"
+                android:text="Total Amount"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/total_cost_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/copy_profile_address"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/total_cost_label"
+                android:textColor="@color/colorSecondary"
+                android:textSize="21sp"
+                tools:text="Total Price: 200" />
+
+            <TextView
+                android:id="@+id/date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/date_display"
+                android:layout_alignBottom="@id/date_display"
+                android:gravity="center_vertical"
+                android:text="Payment Date"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/date_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_cost_display"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/total_cost_label"
+                android:textColor="@color/black_2"
+                android:textSize="21sp"
+                tools:text="Total Price: 200" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="invisible" />
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "234465051307",
+    "project_id": "cctv-project-d9328",
+    "storage_bucket": "cctv-project-d9328.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234465051307:android:6a8b56e3baeb9784a56dee",
+        "android_client_info": {
+          "package_name": "com.anvay.cctvcustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234465051307-do6pi6qr7qjtf1bkib7hebnr8056475r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIS8yC04qyzU8RUulX9yxE2_yCA-C9kRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234465051307-do6pi6qr7qjtf1bkib7hebnr8056475r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

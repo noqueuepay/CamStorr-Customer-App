@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:id="@+id/ticket_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="11895050" />
+
+        <TextView
+            android:id="@+id/complaint_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ticket_number"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/black_3"
+            android:textSize="14sp"
+            tools:text="Late Payment Process" />
+
+        <TextView
+            android:id="@+id/complaint_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/colorSecondary"
+            android:textSize="16sp"
+            tools:text="02 Sep" />
+    </RelativeLayout>
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_gravity="bottom"-->
+    <!--        android:background="@color/colorPrimaryLight" />-->
+</androidx.cardview.widget.CardView>

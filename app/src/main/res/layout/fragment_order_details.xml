@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingEnd="16dp">
+
+            <Button
+                android:id="@+id/received_button"
+                style="@style/FullWidthRoundButton"
+                android:layout_below="@id/receipt_button"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:text="Mark as Received" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/received_button"
+                android:layout_marginStart="42dp"
+                android:layout_marginEnd="42dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="@color/white"
+                android:text="Cancel Order"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/name_label"
+                style="@style/LabelStyle"
+                android:layout_marginStart="16dp"
+                android:text="Product Name" />
+
+            <TextView
+                android:id="@+id/name_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/name_label"
+                android:layout_marginTop="0dp"
+                tools:text="Installation" />
+
+            <TextView
+                android:id="@+id/price_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/name_display"
+                android:layout_marginStart="16dp"
+                android:text="Product Price" />
+
+            <TextView
+                android:id="@+id/price_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/price_label"
+                android:layout_marginTop="0dp"
+                tools:text="Installation" />
+
+
+            <TextView
+                android:id="@+id/quantity_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/price_display"
+                android:layout_marginStart="16dp"
+                android:text="Quantity Purchased" />
+
+            <TextView
+                android:id="@+id/quantity_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/quantity_label"
+                android:layout_marginTop="0dp"
+                tools:text="12" />
+
+            <TextView
+                android:id="@+id/paid_amount_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/quantity_display"
+                android:layout_marginStart="16dp"
+                android:text="Total Amount Paid" />
+
+            <TextView
+                android:id="@+id/paid_amount_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/paid_amount_label"
+                android:layout_marginTop="0dp"
+                android:textStyle="bold"
+                tools:text="Installation" />
+
+            <TextView
+                android:id="@+id/store_name_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/paid_amount_display"
+                android:layout_marginStart="16dp"
+                android:text="Purchased From" />
+
+            <TextView
+                android:id="@+id/store_name_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/store_name_label"
+                android:layout_marginTop="0dp"
+                tools:text="12" />
+
+
+            <TextView
+                android:id="@+id/transaction_no_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/store_name_display"
+                android:layout_marginStart="16dp"
+                android:text="Transaction Number" />
+
+            <TextView
+                android:id="@+id/transaction_no_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/transaction_no_label"
+                android:layout_marginTop="0dp"
+                tools:text="12" />
+
+
+            <TextView
+                android:id="@+id/payment_date_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/transaction_no_display"
+                android:layout_marginStart="16dp"
+                android:text="Purchase Date" />
+
+            <TextView
+                android:id="@+id/payment_date_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/payment_date_label"
+                android:layout_marginTop="0dp"
+                tools:text="12" />
+
+            <TextView
+                android:id="@+id/address_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/payment_date_display"
+                android:layout_marginStart="16dp"
+                android:text="Delivery Address" />
+
+            <TextView
+                android:id="@+id/address_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/address_label"
+                android:layout_marginTop="0dp"
+                tools:text="12" />
+
+            <TextView
+                android:id="@+id/status_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/address_display"
+                android:layout_marginStart="16dp"
+                android:text="Order Status" />
+
+            <TextView
+                android:id="@+id/status_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/status_label"
+                android:layout_marginTop="0dp"
+                android:textStyle="bold"
+                tools:text="12" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/receipt_button"
+                style="@style/AccountFragmentOption"
+                android:layout_below="@id/status_display"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="View Payment Receipt" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="invisible" />
+</FrameLayout>

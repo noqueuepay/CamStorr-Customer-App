@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/bg_edit_text.xml" value="0.2203125" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/bg_round_button.xml" value="0.2203125" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/bg_spinner.xml" value="0.2203125" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/bg_strikeout.xml" value="0.2203125" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/cart_quantity_options_bg.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.2203125" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/ic_baseline_delete_outline_24.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/drawable/ic_download.xml" value="0.2203125" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/activity_main.xml" value="0.19907407407407407" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/dialog_confirmation.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_account.xml" value="0.19537037037037036" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_bank_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_bids.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_cart.xml" value="0.22" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_cart_payment.xml" value="0.22" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_cart_receipt.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_complaint_details.xml" value="0.1787037037037037" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_customer_care.xml" value="0.1787037037037037" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_customer_details.xml" value="0.25" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_ongoing_task_details.xml" value="0.22" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_ongoing_tasks.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_order_details.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_orders.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_payment.xml" value="0.25" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_post_complaint.xml" value="0.1787037037037037" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_post_task_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_posted_tasks.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_product_details.xml" value="0.3773946360153257" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_products.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_receipt.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/fragment_task.xml" value="0.20102564102564102" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/layout_card_options.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/layout_loading.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/list_item_bid.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/list_item_cart.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/list_item_complaint.xml" value="0.25" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/list_item_date_selector.xml" value="0.20416666666666666" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/list_item_ongoing_task.xml" value="0.25" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/list_item_order.xml" value="0.3603082851637765" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/list_item_product.xml" value="0.4152542372881356" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/layout/list_item_task.xml" value="0.2" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1787037037037037" />
+        <entry key="..\:/BrandMore/CCTVcustomer/app/src/main/res/xml/provider_paths.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

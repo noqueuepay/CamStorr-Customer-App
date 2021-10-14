@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragments.CartFragment">
+
+    <RelativeLayout
+        android:id="@+id/cart_summary_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_3"
+        android:elevation="12dp"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/purchase_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Buy Now" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/total_quantity_label"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/total_cost_label"-->
+        <!--            android:layout_alignTop="@id/total_quantity_display"-->
+        <!--            android:layout_alignBottom="@id/total_quantity_display"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:text="Total Items  "-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="18sp" />-->
+
+        <TextView
+            android:id="@+id/total_cost_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/total_cost_label"
+            android:paddingStart="8dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:text="500" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/total_quantity_display"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/total_cost_display"-->
+        <!--            android:layout_alignStart="@id/total_cost_display"-->
+        <!--            android:layout_toEndOf="@+id/total_quantity_label"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="21sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            tools:text="5" />-->
+
+        <TextView
+            android:id="@+id/total_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/total_cost_display"
+            android:layout_alignBottom="@id/total_cost_display"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="Total Cost"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/empty_recycler_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:padding="32dp"
+        android:text="Your cart is empty. Buy cameras and accessories"
+        android:visibility="invisible" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_items_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cart_summary_view"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:clipToPadding="false"
+        android:paddingTop="16dp"
+        android:paddingBottom="150dp"
+        tools:listitem="@layout/list_item_cart" />
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+</RelativeLayout>

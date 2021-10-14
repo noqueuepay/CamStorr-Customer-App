@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/type_label"
+                style="@style/LabelStyle"
+                android:layout_marginStart="16dp"
+                android:text="Type of Service" />
+
+            <TextView
+                android:id="@+id/type_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/type_label"
+                tools:text="Installation" />
+
+            <TextView
+                android:id="@+id/posted_date_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/type_display"
+                android:layout_marginStart="16dp"
+                android:text="Posted On" />
+
+            <TextView
+                android:id="@+id/posted_date_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/posted_date_label"
+                tools:text="20 Sep" />
+
+            <TextView
+                android:id="@+id/brand_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/posted_date_display"
+                android:layout_marginStart="16dp"
+                android:text="Camera Brand" />
+
+            <TextView
+                android:id="@+id/brand_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/brand_label"
+                tools:text="Sony" />
+
+            <TextView
+                android:id="@+id/camera_type_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/brand_display"
+                android:layout_marginStart="16dp"
+                android:text="Camera Type" />
+
+            <TextView
+                android:id="@+id/camera_type_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/camera_type_label"
+                tools:text="Dome Shaped" />
+
+            <TextView
+                android:id="@+id/hard_disk_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/camera_type_display"
+                android:layout_marginStart="16dp"
+                android:text="Hard Disk Type" />
+
+            <TextView
+                android:id="@+id/hard_disk_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/hard_disk_label"
+                tools:text="4 Channel DDR" />
+
+            <TextView
+                android:id="@+id/wire_len_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/hard_disk_display"
+                android:layout_marginStart="16dp"
+                android:text="Wire Length" />
+
+            <TextView
+                android:id="@+id/wire_len_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/wire_len_label"
+                tools:text="300 m" />
+
+            <TextView
+                android:id="@+id/quantity_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/wire_len_display"
+                android:layout_marginStart="16dp"
+                android:text="No of Cameras" />
+
+            <TextView
+                android:id="@+id/quantity_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/quantity_label"
+                tools:text="12" />
+
+            <TextView
+                android:id="@+id/description_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/quantity_display"
+                android:layout_marginStart="16dp"
+                android:text="Description" />
+
+            <TextView
+                android:id="@+id/description_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/description_label"
+                tools:text="too much description here" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/display_bids_button"
+                style="@style/AccountFragmentOption"
+                android:layout_below="@id/description_display"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:text="View Bids" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="invisible" />
+</FrameLayout>

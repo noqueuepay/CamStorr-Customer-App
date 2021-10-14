@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/complaint_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Payment Related" />
+
+    <TextView
+        android:id="@+id/ticket_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/complaint_category"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:text="Ticket Number: 112790" />
+
+    <TextView
+        android:id="@+id/complaint_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ticket_number"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black_2"
+        android:textSize="14sp"
+        tools:text="02 Sep" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/complaint_date"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black_3"
+        android:textSize="16sp"
+        tools:text="@string/random_text_for_testing" />
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/product_delete"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_price"
+            android:layout_alignTop="@id/quantity_options"
+            android:layout_alignBottom="@id/quantity_options"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/cart_option_delete"
+            android:src="@drawable/ic_baseline_delete_outline_24" />
+
+        <LinearLayout
+            android:id="@+id/quantity_options"
+            style="@style/Base.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_below="@id/product_image"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/cart_quantity_options_bg"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/product_quantity_decrement"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/cart_quantity_options"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/product_quantity"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxWidth="180dp"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="200" />
+
+            <TextView
+                android:id="@+id/product_quantity_increment"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/cart_quantity_options"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/product_image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black_2"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            tools:text="Mama Earth Shampoo 200 ML" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_name"
+            android:layout_alignStart="@id/product_name"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="INR 240" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/product_image"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/ProductImageStyle" />
+    </RelativeLayout>
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_gravity="bottom"-->
+    <!--        android:background="@color/colorSecondary" />-->
+</androidx.cardview.widget.CardView>

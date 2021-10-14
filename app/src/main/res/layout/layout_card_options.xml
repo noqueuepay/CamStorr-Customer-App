@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/card_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_image"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:minLines="2"
+            android:textColor="@color/colorSecondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/card_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            app:contentPadding="8dp"
+            app:shapeAppearanceOverlay="@style/CircularImageView" />
+    </RelativeLayout>
+</merge>

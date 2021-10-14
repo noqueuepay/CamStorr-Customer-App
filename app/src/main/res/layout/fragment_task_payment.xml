@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/payment_button"
+                style="@style/FullWidthRoundButton"
+                android:layout_below="@id/total_cost_display"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="32dp"
+                android:text="Proceed to Checkout" />
+
+            <CheckBox
+                android:id="@+id/copy_profile_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_display"
+                android:buttonTint="@color/colorPrimary"
+                android:checked="true"
+                android:text="Use profile address"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/address_display"
+                style="@style/EditTextStyle"
+                android:layout_below="@id/address_label"
+                android:layout_marginStart="0dp" />
+
+            <TextView
+                android:id="@+id/address_label"
+                style="@style/LabelStyle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:text="Address" />
+
+            <TextView
+                android:id="@+id/posted_date_label"
+                style="@style/LabelStyle"
+                android:layout_below="@id/copy_profile_address"
+                android:layout_marginStart="16dp"
+                android:text="Select Date for service" />
+
+            <TextView
+                android:id="@+id/store_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_selector_recycler"
+                android:layout_marginTop="16dp"
+                android:text="Store Name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/order_id_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/order_id_display"
+                android:text="Order Id"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_cost_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/total_cost_display"
+                android:layout_alignBottom="@id/total_cost_display"
+                android:gravity="center_vertical"
+                android:text="Total Amount"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/order_id_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/store_image_display"
+                android:layout_alignStart="@id/store_name_display"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/order_id_label"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:text="Order Id: 112338" />
+
+            <TextView
+                android:id="@+id/total_cost_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_id_display"
+                android:layout_alignStart="@id/store_name_display"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/total_cost_label"
+                android:textColor="@color/colorSecondary"
+                android:textSize="21sp"
+                tools:text="Total Price: 200" />
+
+            <TextView
+                android:id="@+id/store_name_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/store_name_label"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/store_image_display"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:text="Easy Day Mart, HaldwaniEasy Day Mart, HaldwaniEasy Day Mart, HaldwaniEasy Day Mart, Haldwani" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/date_selector_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/posted_date_label"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_date_selector" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/store_image_display"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/store_name_label"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/CircularImageView" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="invisible" />
+</FrameLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="32dp">
+
+            <Button
+                android:id="@+id/buy_now_button"
+                style="@style/FullWidthRoundButton"
+                android:layout_below="@id/product_details"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="0dp"
+                android:text="Buy Now" />
+
+            <Button
+                android:id="@+id/add_to_cart_button"
+                style="@style/AddToCartButton"
+                android:layout_below="@id/buy_now_button"
+                android:backgroundTint="@color/colorSecondary"
+                android:text="Add to Cart" />
+
+
+            <ImageView
+                android:id="@+id/image_display"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:id="@+id/product_name"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/image_display"
+                android:textStyle="bold"
+                tools:text="Mi Earphone Basic with Ultra Deep Bass" />
+
+            <TextView
+                android:id="@+id/product_brand"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/product_name"
+                android:textColor="@color/black_2"
+                android:textStyle="italic"
+                tools:text="Mi Brand" />
+
+            <TextView
+                android:id="@+id/product_price_original"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/product_price"
+                android:layout_alignBottom="@id/product_price"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_strikeout"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/black_3"
+                android:textSize="18sp"
+                tools:text="INR 2500" />
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_brand"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/product_price_original"
+                android:textColor="@color/colorSecondary"
+                android:textSize="21sp"
+                tools:text="INR 2000 " />
+
+            <TextView
+                android:id="@+id/product_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/product_price_original"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="32dp"
+                android:layout_toEndOf="@id/product_price"
+                android:textColor="@color/colorPrimary"
+                android:textSize="21sp"
+                android:textStyle="italic"
+                tools:text="20% off" />
+
+            <TextView
+                android:id="@+id/info_label"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/product_price_original"
+                android:text="Product Info"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/product_details"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/info_label"
+                android:layout_marginTop="0dp"
+                tools:text="Mi Earphone Basic with Ultra Deep Bass" />
+
+
+            <TextView
+                android:id="@+id/details_label"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/add_to_cart_button"
+                android:text="Other Details"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/store_name_label"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/details_label"
+                android:layout_alignTop="@id/store_name_display"
+                android:layout_alignEnd="@id/mAddress_label"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:text="Sold By"
+                android:textColor="@color/black_3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sku_label"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/mAddress_label"
+                android:layout_alignTop="@id/sku_display"
+                android:layout_alignEnd="@id/mAddress_label"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:text="Product SKU"
+                android:textColor="@color/black_3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sla_label"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/sku_label"
+                android:layout_alignTop="@id/sla_display"
+                android:layout_alignEnd="@id/mAddress_label"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:text="Product SLA"
+                android:textColor="@color/black_3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mName_label"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/store_name_label"
+                android:layout_alignTop="@id/mName_display"
+                android:layout_alignEnd="@id/mAddress_label"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:text="Manufacturer's\nName"
+                android:textColor="@color/black_3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mAddress_label"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/mName_label"
+                android:layout_alignTop="@id/mAddress_display"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:text="Manufacturer's\nAddress"
+                android:textColor="@color/black_3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/gst_label"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/sla_label"
+                android:layout_alignTop="@id/gst_display"
+                android:layout_alignEnd="@id/mAddress_label"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:text="GST charged"
+                android:textColor="@color/black_3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/gst_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/sla_display"
+                android:layout_alignStart="@id/store_name_display"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Walkway Store Name" />
+
+            <TextView
+                android:id="@+id/store_name_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/details_label"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toEndOf="@id/store_name_label"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Walkway Store Name" />
+
+            <TextView
+                android:id="@+id/sku_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/mAddress_display"
+                android:layout_alignStart="@id/store_name_display"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Walkway Store Name" />
+
+            <TextView
+                android:id="@+id/sla_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/sku_display"
+                android:layout_alignStart="@id/store_name_display"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Walkway Store Name" />
+
+            <TextView
+                android:id="@+id/mName_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/store_name_display"
+                android:layout_alignStart="@id/store_name_display"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Walkway Store Name" />
+
+            <TextView
+                android:id="@+id/mAddress_display"
+                style="@style/DisplayStyle"
+                android:layout_below="@id/mName_display"
+                android:layout_alignStart="@id/store_name_display"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Walkway Store Name Address will probably be very long take care of responsive design" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+</FrameLayout>
